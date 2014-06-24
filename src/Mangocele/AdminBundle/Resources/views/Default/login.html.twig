@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<!--  Desarrollado por ArtsMorgan -->
+<head>
+    <meta charset="utf-8" />
+    <title>Administrador Mangocele</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="/bundles/admin/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/bundles/admin/css/metro.css" rel="stylesheet" />
+    <link href="/bundles/admin/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="/bundles/admin/css/style.css" rel="stylesheet" />
+    <link href="/bundles/admin/css/style_responsive.css" rel="stylesheet" />
+    <link href="/bundles/admin/css/style_default.css" rel="stylesheet" id="style_color" />
+    <link rel="stylesheet" type="text/css" href="/bundles/admin/uniform/css/uniform.default.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="login">
+
+<!-- BEGIN LOGIN -->
+<div class="content">
+    <!-- BEGIN LOGIN FORM -->
+    <form class="form-vertical login-form" action="{{ path("fos_user_security_check") }}" method="post">
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+        <!-- BEGIN LOGO -->
+        <div class="logo">
+            <img src="../images/logo.png" alt="" />
+        </div>
+        <!-- END LOGO -->
+        <h3 class="form-title">Loguearse en el Sistema</h3>
+
+        {% trans_default_domain 'FOSUserBundle' %}
+        {% if error %}
+            <div>{{ error|trans }}</div>
+        {% endif %}
+
+
+    <div class="control-group">
+        <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+        <label class="control-label visible-ie8 visible-ie9">{{ 'security.login.username'|trans }}</label>
+        <div class="controls">
+            <div class="input-icon left">
+                <i class="icon-user"></i>
+                <input type="text" class="m-wrap placeholder-no-fix" id="username" name="_username" value="{{ last_username }}" required="required" />
+            </div>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label visible-ie8 visible-ie9">{{ 'security.login.password'|trans }}</label>
+        <div class="controls">
+            <div class="input-icon left">
+                <i class="icon-lock"></i>
+                <input type="password" class="m-wrap placeholder-no-fix" id="password" name="_password" required="required" />
+                <input type="hidden" name="_target_path" value="/admin/home" />
+            </div>
+        </div>
+    </div>
+    <div class="form-actions">
+        <input type="hidden" name="_target_path" value="/admin/home/" />
+        <input type="submit"  class="btn green pull-right" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+
+    </div>
+</form>
+<!-- END LOGIN FORM -->
+
+</div>
+<!-- END LOGIN -->
+<!-- BEGIN COPYRIGHT -->
+<div class="copyright">
+    Mangocele 2014
+</div>
+<!-- END COPYRIGHT -->
+<!-- BEGIN JAVASCRIPTS -->
+<script src="/bundles/admin/js/jquery-1.8.3.min.js"></script>
+<script src="/bundles/admin/bootstrap/js/bootstrap.min.js"></script>
+<script src="/bundles/admin/uniform/jquery.uniform.min.js"></script>
+<script src="/bundles/admin/js/jquery.blockui.js"></script>
+<script type="text/javascript" src="/bundles/admin/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="/bundles/admin/js/app.js"></script>
+<script>
+    jQuery(document).ready(function() {
+        App.initLogin();
+    });
+</script>
+<!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>

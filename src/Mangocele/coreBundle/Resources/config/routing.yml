@@ -1,0 +1,3 @@
+MangocelecoreBundle_admin_empresas:
+  resource: "@MangocelecoreBundle/Resources/config/routing/empresas.yml"
+  prefix:   /admin/empresas

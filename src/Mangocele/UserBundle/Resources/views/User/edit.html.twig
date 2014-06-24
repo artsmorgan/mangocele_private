@@ -1,0 +1,113 @@
+
+{% extends 'MangoceleAdminBundle:Default:adminBase.html.twig' %}
+{% block pagetitle%}Editar Usuario{% endblock %}
+{% block breadcrumbs%}Usuarios{% endblock %}
+{% block body -%}
+{% if updated %}
+    <div class="alert alert-success">
+        <strong>Exito!</strong> El usuario ha sido actualizado.
+    </div>
+{% endif %}
+
+<div class="delete-form pull-right">
+    {{ form_start(delete_form) }}
+    {{ form_errors(delete_form) }}
+    {{ form_widget(delete_form.submit,{ 'attr': {'class': 'btn red',} }) }}
+    {{ form_end(delete_form) }}
+</div>
+<div class="edit-form pull-left">
+    {{ form_start(edit_form,{ 'attr': {'class': 'form-horizontal mangocele-info'} }) }}
+    {{ form_errors(edit_form) }}
+
+
+    <div class="control-group">
+        {{ form_label(edit_form.email,null,{ 'label_attr': {'class': 'control-label'}} ) }}
+        <div class="controls">
+            {{ form_errors(edit_form.email) }}
+            {{ form_widget(edit_form.email) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        {{ form_label(edit_form.password,null,{ 'label_attr': {'class': 'control-label'}}) }}
+        <div class="controls">
+            {{ form_errors(edit_form.password) }}
+            {{ form_widget(edit_form.password) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        {{ form_label(edit_form.roles,null,{ 'label_attr': {'class': 'control-label'}}) }}
+        <div class="controls">
+            {{ form_errors(edit_form.roles) }}
+            {{ form_widget(edit_form.roles) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        {{ form_label(edit_form.nombre,null,{ 'label_attr': {'class': 'control-label'}}) }}
+        <div class="controls">
+            {{ form_errors(edit_form.nombre) }}
+            {{ form_widget(edit_form.nombre) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        {{ form_label(edit_form.apellido1,null,{ 'label_attr': {'class': 'control-label'}}) }}
+        <div class="controls">
+            {{ form_errors(edit_form.apellido1) }}
+            {{ form_widget(edit_form.apellido1) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        {{ form_label(edit_form.apellido2,null,{ 'label_attr': {'class': 'control-label'}}) }}
+        <div class="controls">
+            {{ form_errors(edit_form.apellido2) }}
+            {{ form_widget(edit_form.apellido2) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        {{ form_label(edit_form.pais,null,{ 'label_attr': {'class': 'control-label'}}) }}
+        <div class="controls">
+            {{ form_errors(edit_form.pais) }}
+            {{ form_widget(edit_form.pais) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        {{ form_label(edit_form.empresa,null,{ 'label_attr': {'class': 'control-label'}}) }}
+        <div class="controls">
+            {{ form_errors(edit_form.empresa) }}
+            {{ form_widget(edit_form.empresa) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        {{ form_label(edit_form.telefono,null,{ 'label_attr': {'class': 'control-label'}}) }}
+        <div class="controls">
+            {{ form_errors(edit_form.telefono) }}
+            {{ form_widget(edit_form.telefono) }}
+        </div>
+    </div>
+
+    {{ form_widget(edit_form.submit,{ 'attr': {'class': 'btn blue','formnovalidate':''} }) }}
+
+    {{ form_end(edit_form) }}
+
+</div>
+    <br clear="all">
+{% endblock %}
+{% block scripts %}
+    <script>
+        jQuery(document).ready(function() {
+            App.setPage("table_managed");
+            App.init(); // init the rest of plugins and elements
+            $('#clientes').addClass('active');
+            $('#mangocele_userbundle_user_password').val('');
+        });
+    </script>
+{% endblock %}
+
+

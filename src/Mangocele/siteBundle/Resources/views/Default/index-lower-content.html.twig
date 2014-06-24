@@ -1,0 +1,26 @@
+<div class="left-nav">
+    <p class="cat-title">Categorías: </p>
+    <ul class="nav nav-pills nav-stacked">
+        {% for category in categories|slice(0, 10) %}
+            <li><a href="categorias/{{ category }}">{{ category }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="company-container visible-lg">
+    <ul class="products-list">
+        {% for a in 0..8 %}
+            <li>
+                <div class="first-el visible-lg">
+                    <a href="/producto/pulseras">
+                        <img src="images/pulseras.png">
+                        <div class="product-info">
+                            <div class="pull-left product-description">Collares</div>
+                            <div class="pull-right">C 5,000</div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

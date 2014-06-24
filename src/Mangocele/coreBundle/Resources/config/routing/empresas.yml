@@ -1,0 +1,30 @@
+admin_empresas:
+    pattern:  /
+    defaults: { _controller: "MangocelecoreBundle:Empresas:index" }
+
+admin_empresas_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "MangocelecoreBundle:Empresas:show" }
+
+admin_empresas_new:
+    pattern:  /new
+    defaults: { _controller: "MangocelecoreBundle:Empresas:new" }
+
+admin_empresas_create:
+    pattern:  /create
+    defaults: { _controller: "MangocelecoreBundle:Empresas:create" }
+    requirements: { _method: post }
+
+admin_empresas_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "MangocelecoreBundle:Empresas:edit" }
+
+admin_empresas_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "MangocelecoreBundle:Empresas:update" }
+    requirements: { _method: post|put }
+
+admin_empresas_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "MangocelecoreBundle:Empresas:delete" }
+    requirements: { _method: post|delete }

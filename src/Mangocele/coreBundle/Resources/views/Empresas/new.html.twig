@@ -1,0 +1,130 @@
+{% extends 'MangoceleAdminBundle:Default:adminBase.html.twig' %}
+{% block pagetitle%}Cear Nueva Empresa{% endblock %}
+{% block breadcrumbs%}Empresas{% endblock %}
+{% block body -%}
+    <a href="{{ path('admin_empresas') }}" class="btn green pull-right btn-empresas-listado">
+        Listado de Empresas
+    </a>
+    <br clear="all" />
+    <div class="empresas-img-left pull-left">
+        <div class="img-principal">
+            <img src="http://placehold.it/350x350">
+            <form action="upload_file.php" method="post" enctype="multipart/form-data">
+                <label for="file">Subir Imagen:</label>
+                <input type="file" name="file" id="file"><br>
+                <input type="submit" name="submit" value="Subir" class="btn" style="width: 100%">
+            </form>
+        </div>
+    </div>
+    <div class="empresas-info-right pull-left">
+        {{ form_start(form,{ 'attr': {'class': 'form-horizontal mangocele-info'} }) }}
+            {{ form_errors(form) }}
+            <div class="control-group">
+                {{ form_label(form.idCliente,null,{ 'label_attr': {'class': 'control-label'}} ) }}
+                <div class="controls">
+                    {{ form_errors(form.idCliente) }}
+                    {{ form_widget(form.idCliente) }}
+                </div>
+            </div>
+
+            <div class="control-group">
+                {{ form_label(form.nombre,null,{ 'label_attr': {'class': 'control-label'}} ) }}
+                <div class="controls">
+                    {{ form_errors(form.nombre) }}
+                    {{ form_widget(form.nombre) }}
+                </div>
+            </div>
+
+            <div class="control-group">
+                {{ form_label(form.descripcion,null,{ 'label_attr': {'class': 'control-label'}} ) }}
+                <div class="controls">
+                    {{ form_errors(form.descripcion) }}
+                    {{ form_widget(form.descripcion) }}
+                </div>
+            </div>
+
+            <div class="control-group">
+                {{ form_label(form.email,null,{ 'label_attr': {'class': 'control-label'}} ) }}
+                <div class="controls">
+                    {{ form_errors(form.email) }}
+                    {{ form_widget(form.email) }}
+                </div>
+            </div>
+
+            <div class="control-group">
+                {{ form_label(form.direccion,null,{ 'label_attr': {'class': 'control-label'}} ) }}
+                <div class="controls">
+                    {{ form_errors(form.direccion) }}
+                    {{ form_widget(form.direccion) }}
+                </div>
+            </div>
+
+            <table class="table">
+                <tr>
+                    <td>
+                        {{ form_label(form.telefonoOficina) }}
+                        {{ form_errors(form.telefonoOficina) }}
+                        {{ form_widget(form.telefonoOficina) }}
+                    </td>
+                    <td>
+                        {{ form_label(form.telefonoEmpresa) }}
+                        {{ form_errors(form.telefonoEmpresa) }}
+                        {{ form_widget(form.telefonoEmpresa) }}
+                    </td>
+                    <td>
+                        {{ form_label(form.fax) }}
+                        {{ form_errors(form.fax) }}
+                        {{ form_widget(form.fax) }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ form_label(form.facebook) }}
+                        {{ form_errors(form.facebook) }}
+                        {{ form_widget(form.facebook) }}
+                    </td>
+                    <td>
+                        {{ form_label(form.twitter) }}
+                        {{ form_errors(form.twitter) }}
+                        {{ form_widget(form.twitter) }}
+                    </td>
+                    <td>
+                        {{ form_label(form.youtube) }}
+                        {{ form_errors(form.youtube) }}
+                        {{ form_widget(form.youtube) }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ form_label(form.cordX) }}
+                        {{ form_errors(form.cordX) }}
+                        {{ form_widget(form.cordX) }}
+                    </td>
+                    <td>
+                        {{ form_label(form.cordY) }}
+                        {{ form_errors(form.cordY) }}
+                        {{ form_widget(form.cordY) }}
+                    </td>
+                    <td>
+                        {{ form_widget(form.submit,{ 'attr': {'class': 'btn blue pull-right','style':'margin-top:20px;width:100%','formnovalidate':''} }) }}
+                    </td>
+                </tr>
+            </table>
+
+
+        {{ form_end(form) }}
+    </div>
+
+
+<br clear="all" />
+{% endblock %}
+{% block scripts %}
+    <script>
+        jQuery(document).ready(function() {
+            App.setPage("table_managed");
+            App.init(); // init the rest of plugins and elements
+            $('#empresas').addClass('active');
+            $('#mangocele_userbundle_user_password').val('');
+        });
+    </script>
+{% endblock %}

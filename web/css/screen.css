@@ -1,0 +1,737 @@
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 50px;
+    }
+    .header .navbar-collapse {
+
+    }
+
+    .logo{
+        width: 203px;
+        height: 57px;
+    }
+
+    .container {
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-menu {
+        margin: 0 !important;
+        background: #86c563;
+        width: 100% !important;
+        overflow: hidden;
+        -webkit-box-shadow:inset 0 -5px 10px 2px rgba(0,0,0,0.5);
+        box-shadow:inset 0 -5px 10px 2px rgba(0,0,0,0.5);
+    }
+    .main-menu ul li a{
+        color:white !important;
+    }
+
+    .main-menu .nav > li {
+        width: 100%;
+    }
+
+    .search{
+        position: fixed;
+        bottom: 0;
+        background: #86c563;
+        left: 0 !important;
+        padding: 10px 5px 2px 5px;
+        margin:0 !important;
+        width: 100% !important;
+        z-index: 2;
+    }
+
+    .header {
+        margin-top: 0 !important;
+        border-bottom: 1px solid #ccc;
+        padding: 5px 0;
+    }
+
+    .left-nav{
+        float: left;
+        width: 100% !important;
+
+    }
+    .first-el{
+        float: left;
+        margin: 0 ;
+    }
+    .second-el{
+        float: left;
+        margin-top: 20px;
+    }
+
+    .lower-content{
+        float: left;
+        margin-top: 0 !important;
+        width: 100%;
+    }
+
+    .nav-pills > li  {
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0 !important;
+    }
+    .nav-pills > li > a {
+        text-align: center;
+    }
+
+    .main-search{
+        width: 80% !important;
+        margin-right: 10px !important;
+        margin-left: 10px !important;
+    }
+
+    .content-wrapper h1 {
+        float: left;
+        padding: 0 10px 15px 10px !important;
+        width: 100%;
+    }
+
+    .empresas-order {
+        width: 100%;
+        margin: 10px 0 0 0 !important;
+
+    }
+
+    .empresas-order select {
+        width:100%;
+    }
+    .products-list{
+        padding: 0;
+    }
+
+    .products-list li {
+        padding: 10px 5px;
+        border-bottom: 1px dotted #ccc;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    .first-el {
+        width: 100%;
+    }
+
+    .first-el a {
+        float: left;
+        width: 100%;
+    }
+
+    .first-el a img{
+        width: 150px;
+    }
+
+    .product-info {
+        /*float: right !important;*/
+        width: auto !important;
+        background: none!important;
+        margin-top: 15px !important;
+    }
+
+    .product-description{
+        font-weight: bold;
+    }
+
+    .empresa-descripcion{
+        width: 50% !important;
+        font-size: 12px;
+        margin-top: -20px;
+    }
+
+    .empresas li {
+        width: 100%;
+        height: 150px !important;
+        overflow: hidden;
+        border-bottom: 1px dotted #ccc !important;
+    }
+
+    .title h2 {
+        font-size: 18px !important;
+    }
+
+    .company-img{
+        width: 100% !important;
+    }
+
+    .company-name{
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    .empresa-contact-form a{
+        width: 100%;
+        padding: 6px;
+    }
+    .empresa-contact-form{
+        width: 100%;
+    }
+
+    #empresa h1 {
+        width: 100%;
+    }
+    .company-description {
+        padding: 5px 15px;
+    }
+
+    #map-canvas {
+        height: 300px !important;
+        /* float: left; */
+        width: 100% !important;
+    }
+
+    #empresa .company-container {
+        width: 100% !important;
+    }
+
+    #empresa .company-container h4 {
+        /* border-bottom: 1px solid #eeeeee; */
+        border-bottom: 1px solid #eeeeee !important;
+        margin: 0 0 0 10px !important;
+        padding: 15px 0;
+        float: left;
+        width: 100% !important;
+    }
+
+    .content-wrapper .right-panel {
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    .content-wrapper .right-panel ul li{
+        padding: 10px 0;
+        text-align: center;
+        border-bottom: 1px dotted #ccc;
+        width: 100% !important;
+    }
+
+    .product-name{
+        margin-top: 120px;
+    }
+
+    .conocenos{
+        padding: 5px 15px;
+    }
+
+    .form-contactenos{
+        width: 100% !important;
+        padding: 10px;
+    }
+
+    .form-ingresar {
+        float: left;
+        width: 100% !important;
+        margin-left: 0 !important;
+        padding: 50px 10px !important;
+    }
+
+    .header-banner{
+        width: 100%;
+        height: 110px;
+    }
+    .imagenes-p{
+        width: 150px;
+        height: 88px;
+        float: left;
+    }
+
+    .product-info div {
+        float: none !important;
+    }
+
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.logo{
+    float: left;
+}
+
+.search{
+    width: 210px;
+    float: right;
+    margin: 20px 0 0 10px;
+}
+
+.main-menu{
+    width: 600px;
+    float: right;
+    margin: 15px 0 0 30px;
+}
+
+.main-menu ul li a{
+    color: #85c570;
+}
+
+.main-menu ul li a:hover{
+    color: #fff;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    background: #85c570 !important;
+    color: #fff;
+}
+
+.header {
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.main-search{
+    width: 170px;
+    float: left;
+    margin: 0 0 0 0;
+}
+
+.btn-no-border{
+    border: none !important;
+}
+
+.footer{
+    text-align: center;
+}
+
+/*
+
+    Carousel responsive
+
+*/
+
+#wrapper {
+    width: 100%;
+    min-width: 900px;
+    height: 500px;
+    margin: -16% 0 0 0;
+    /*commment*/
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+#carousel div {
+    height: 500px;
+    float: left;
+}
+#carousel img {
+    min-width: 100%;
+    min-height: 100%;
+}
+#pager {
+    border-radius: 20px;
+    background: #fff;
+    text-align: center;
+    width: 120px;
+    height: 50px;
+    padding-top: 2px;
+    margin: 185px 0 0 -60px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+}
+#pager a.selected span {
+    background: #666;
+}
+#pager a {
+    display: inline-block;
+    padding: 5px;
+}
+#pager span {
+    border-radius: 10px;
+    background: #ccc;
+    text-indent: -100px;
+    line-height: 0;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.lower-content{
+    float: left;
+    margin-top: 420px;
+}
+.index-negocios{
+    float: left;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#title {
+    text-align: left;
+    width: 300px;
+    margin-top: -10px;
+    position: absolute;
+    top: 50%;
+    right: 50px;
+}
+#title h3 {
+    text-shadow:
+        0 3px 3px rgba( 0, 0, 0, 0.3 ),
+        0 -3px 3px rgba( 0, 0, 0, 0.3 ),
+        3px 0 3px rgba( 0, 0, 0, 0.3 ),
+        -3px 0 3px rgba( 0, 0, 0, 0.3 );
+
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 50px;
+    color: #fff;
+    margin: 0;
+}
+#title a {
+    color: #fff;
+}
+#title a:hover {
+    background: rgba( 0, 0, 0, 0.5 );
+    padding: 2px 5px;
+}
+
+#title h3 span {
+    padding-left: 50px;
+}
+
+/****************************************************************/
+
+.left-nav{
+    float: left;
+    margin-top: 20px;
+    width: 120px;
+}
+.first-el{
+    float: left;
+}
+.products-list {
+    list-style: none;
+    margin-top: 20px;
+    float: left;
+    width: 100%;
+}
+
+.products-list li{
+    float: left;
+    width: 300px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.second-el{
+    float: left;
+    margin-top: 20px;
+}
+
+.company-img-icon{
+    height: 110px;
+    width: 110px;
+    float: left;
+    margin: 0 20px;
+    -webkit-filter: grayscale(1); /* Webkit */
+    filter: gray; /* IE6-9 */
+    filter: grayscale(1); /* W3C */
+}
+
+.rounded {
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
+
+.comercios-list{
+    list-style: none;
+    float: left;
+    width: 400px;
+    margin: 10px 0 50px 30%;
+}
+.comercios-list li{
+    float:left;
+    margin: 0 10px;
+}
+
+.header .navbar-collapse {
+    max-height: 400px !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.product-info{
+    background: #d2df58;
+    float: left;
+    width: 296px;
+    padding: 10px 5px;
+    margin-top: -20px;
+    z-index: 999;
+    position: relative;
+    margin-left: 5px;
+}
+
+.company-container{
+    float: left;
+    width: 1000px;
+    padding-top: 25px;
+}
+
+.left-nav ul li a{
+    color: #333 !important;
+    font-style: italic;
+    font-weight: bold;
+}
+.left-nav .nav > li > a:hover, .nav > li > a:focus {
+    background: #333 !important;
+    color: #fff !important;
+}
+
+.cat-title{
+    text-align: center;
+    color: #ccc;
+}
+
+.content-wrapper{
+    padding-top: 30px;
+    min-height: 600px;
+    float: left;
+    width: 100%;
+}
+
+#empresas {
+    width: 100%;
+}
+
+.empresas-order{
+    float: right;
+    font-size: 12px;
+    margin-right: 40px;
+    margin-top: 10px;
+    color: #ccc;
+}
+
+.content-wrapper h1 {
+    font-size: 20px;
+    color: #777;
+    text-transform: uppercase;
+    margin: 20px 0;
+    padding: 0 0 15px 0;
+    background: url(../images/header-border.png) no-repeat left bottom;
+}
+
+.content-wrapper .left-panel{
+    float: left;
+    border-radius: 8px;
+    width: 35%;
+    background: url("../images/title-bg.png") repeat;
+    padding: 20px 10px;
+}
+
+.content-wrapper .right-panel{
+    float: left;
+    margin: 10px 0 0 130px;
+    width: 600px;
+}
+
+.content-wrapper .nav > li {
+    width: 200px;
+    float: left;
+}
+.content-wrapper .nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: underline;
+    background: none !important;
+    color: blue !important;
+}
+
+.empresas{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.empresas li {
+    margin-top: 20px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 25px;
+    float: left;
+}
+
+.empresas li a{
+    color: #3c3c3c;
+}
+
+.empresas li a:hover{
+    text-decoration: none;
+}
+
+.empresas li a:hover .title{
+    color: darkred;
+}
+.empresas li a:hover .empresa-accion{
+    color: #333333;
+}
+
+.empresa-descripcion {
+    float: left;
+    width: 75%;
+}
+
+.empresa-accion {
+    float: left;
+    font-size: 48px;
+    margin: 40px 0 0 50px;
+    color: #ccc;
+}
+
+.conocenos{
+    line-height: 16px;
+}
+.conocenos p {
+    margin: 20px 0 !important;
+}
+
+.form-contactenos{
+    float: left;
+    width: 70%;
+    padding-bottom: 50px;
+}
+
+.form-ingresar{
+    float: left;
+    width: 50%;
+    margin-left: 25%;
+    padding: 50px 0;
+}
+
+.ingresar-links {
+    float: left;
+    margin-top: 15px;
+}
+.ingresar-ing{
+    float: right;
+}
+
+.forgot-link{
+    margin-left: 25px;
+}
+
+#empresa .product-info{
+    width: 225px;
+}
+
+#empresa .products-list li{
+    width: 225px;
+}
+
+.company-header, .company-body, .company-actions, .company-products{
+    float: left;
+    width: 100%;
+}
+
+.company-img {
+    width: 240px;
+    height: 240px;
+    float: left;
+    margin-top: 20px;
+}
+
+.company-name {
+    float: left;
+    margin-left: 50px;
+    width: 70%;
+}
+
+#map-canvas {
+    height: 240px;
+    width: 240px;
+}
+
+
+#empresa .company-container {
+    width: 75%;
+}
+
+#empresa .company-container h4 {
+    /*border-bottom: 1px solid #eeeeee;*/
+    border-top: 1px solid #eeeeee;
+    margin: 0 0 0 55px;
+    padding: 15px 0;
+    float: left;
+    width: 100%;
+}
+.company-information {
+    margin-top: 25px;
+}
+.company-information ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.company-information ul .divider {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #ccc;
+    margin: 5px 0;
+}
+
+.empresa-contact-form{
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+
+
+#listado-productos .products-list li{
+    margin: 20px;
+}
+
+.product-actions {
+    margin-top: 10px;
+}
+
+.form-control-custom{
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.tabs .secondary-nav {
+    float:right;
+    margin-left:10px;
+    margin-right:0;
+}
+
+.content-wrapper .nav > li{
+    width: 120px !important;
+}
+
+.tab-user{
+    min-height: 200px;
+    padding: 20px 10px;
+}
+
+.tab-user h4 {
+    margin-bottom: 20px;
+}
+
+.cat-usuario{
+    margin-top: 30px;
+}
+
+.label-company {
+    color: #777;
+    width: 100%;
+    text-align: center;
+    float: left;
+    margin-top: 15px;
+}
+
+.company-left{
+    width: 240px;
+}

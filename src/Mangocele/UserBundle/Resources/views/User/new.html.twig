@@ -1,0 +1,15 @@
+{% extends 'MangoceleAdminBundle:Default:adminBase.html.twig' %}
+{% block pagetitle%}Creación de usuarios{% endblock %}
+{% block breadcrumbs%}Usuarios{% endblock %}
+{% block body %}
+    {{ form(form) }}
+{% endblock %}
+{% block scripts %}
+    <script>
+        jQuery(document).ready(function() {
+            App.setPage("table_managed");
+            App.init(); // init the rest of plugins and elements
+            $('#clientes').addClass('active');
+        });
+    </script>
+{% endblock %}

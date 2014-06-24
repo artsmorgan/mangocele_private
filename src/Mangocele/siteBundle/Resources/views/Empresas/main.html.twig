@@ -1,0 +1,65 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}MangoceleSiteBundle:Empresas:main{% endblock %}
+
+{% block body %}
+
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANQEqokx5ywJxdvb2v-tuohPgaegFDeLg&sensor=false">
+    </script>
+    <script type="text/javascript">
+        function initialize() {
+            var mapOptions = {
+                center: new google.maps.LatLng(-34.397, 150.644),
+                zoom: 8
+            };
+            var map = new google.maps.Map(document.getElementById("map-canvas"),
+                    mapOptions);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+    {% include "MangoceleSiteBundle:modals:contact-modal.html.twig" %}
+
+    <div class="content-wrapper" id="empresa">
+
+        <div class="company-header">
+
+            <div class="company-img">
+                <img src="{{ app.request.scheme ~'://' ~ app.request.httpHost ~ asset( empresa_data.img ) }}">
+            </div>
+
+            <div class="company-name">
+               <h1>
+                   {{ empresa_data.nombre }}
+                   <div class="empresa-contact-form pull-right">
+                       <a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#contactModal">
+                        <span class="glyphicon glyphicon-envelope"></span>
+                        <span> Contactar</span>
+                       </a>
+                   </div>
+               </h1>
+
+               <div class="company-description">
+                   {{ empresa_data.descripcion|raw }}
+                   <hr>
+                   <h4>Categorias: </h4>
+
+                   <div class="categorias">
+                       {% for categoria in categorias|slice(0, 10) %}
+                           <span class="label label-info">{{ categoria }}</span>
+                       {% endfor %}
+                   </div>
+
+               </div>
+
+            </div>
+
+        </div>
+
+        <div class="company-products">
+            {% include "MangoceleSiteBundle:Empresas:product-list.html.twig" %}
+        </div>
+
+    </div>
+{% endblock %}

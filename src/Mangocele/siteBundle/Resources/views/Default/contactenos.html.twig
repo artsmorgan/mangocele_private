@@ -1,0 +1,61 @@
+{% extends '::base.html.twig' %}
+{% block title %} Mangocele.cr {% endblock %}
+{% block stylesheets %}{% endblock %}
+{% block jsfiles %}
+    <script type="text/javascript" src="{{ asset('js/modernizr.custom.js') }}" ></script>
+{% endblock %}
+{% block body %}
+<div class="content-wrapper">
+    <div class="header-banner"><img src="http://placehold.it/1100x110"></div>
+    <h1>Contactenos</h1>
+    <div class="form-contactenos">
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+
+        <div class="form-group">
+            {{ form_label(form.Nombre_Completo) }}
+            {{ form_errors(form.Nombre_Completo) }}
+            {{ form_widget(form.Nombre_Completo,{'attr': {'class': 'form-control'} }) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.Email) }}
+            {{ form_errors(form.Email) }}
+            {{ form_widget(form.Email,{'attr': {'class': 'form-control'} }) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.Telefono) }}
+            {{ form_errors(form.Telefono) }}
+            {{ form_widget(form.Telefono,{'attr': {'class': 'form-control'} }) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.Direccion) }}
+            {{ form_errors(form.Direccion) }}
+            {{ form_widget(form.Direccion,{'attr': {'class': 'form-control', 'rows':'3'}}) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.Empresa) }}
+            {{ form_errors(form.Empresa) }}
+            {{ form_widget(form.Empresa,{'attr': {'class': 'form-control'} }) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.Comentarios) }}
+            {{ form_errors(form.Comentarios) }}
+            {{ form_widget(form.Comentarios,{'attr': {'class': 'form-control', 'rows':'3'} }) }}
+        </div>
+
+        <div>
+            {{ form_widget(form.Enviar,{'attr':{'class':'btn btn-default'}}) }}
+        </div>
+
+        {{ form_end(form) }}
+    </div>
+</div>
+{% endblock %}
+{% block javascripts %}
+
+{% endblock %}

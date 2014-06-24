@@ -1,0 +1,39 @@
+<div class="left-nav company-left">
+    <div id="map-canvas"> </div>
+    <div class="company-information well well-sm">
+        <ul>
+            <li class="information-hd">Dirección:</li>
+            <li>San Rafael, Escazu</li>
+            <li class="divider"></li>
+            <li class="information-hd">Teléfono:</li>
+            <li>7176-5072</li>
+            <li class="divider"></li>
+            <li class="information-hd">Facebook:</li>
+            <li><a href="http://facebook.com"> www.facebook.com </a></li>
+            <li class="divider"></li>
+            <li class="information-hd">Email:</li>
+            <li><a href="#" data-toggle="modal" data-target="#contactModal">amorgan115@gmail.com</a> </li>
+        </ul>
+    </div>
+</div>
+
+<div class="company-container">
+
+    <h4>Productos</h4>
+
+    <ul class="products-list">
+        {% for a in 0..8 %}
+            <li>
+                <div class="first-el">
+                    <a href="#">
+                        <div class="imagenes-p"><div class="imagenes-p"><img src="{{ app.request.scheme ~'://' ~ app.request.httpHost ~ asset('images/pulseras.png') }}"></div></div>
+                        <div class="product-info">
+                            <div class="pull-left product-description">Collares</div>
+                            <div class="pull-right">C 5,000</div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

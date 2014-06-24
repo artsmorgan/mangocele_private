@@ -1,0 +1,46 @@
+mangocele_site_homepage:
+    pattern:  /
+    defaults: { _controller: MangoceleSiteBundle:Default:index }
+
+mangocele_site_conocenos:
+    pattern:  /conocenos
+    defaults: { _controller: MangoceleSiteBundle:Default:conocenos }
+
+mangocele_site_categorias_listado:
+    pattern:  /categorias
+    defaults: { _controller: MangoceleSiteBundle:Default:categorias }
+
+mangocele_site_empresas_listado:
+    pattern:  /empresas
+    defaults: { _controller: MangoceleSiteBundle:Default:empresas }
+
+mangocele_site_contactenos:
+    pattern:  /contactenos
+    defaults: { _controller: MangoceleSiteBundle:Default:contactenos }
+
+
+mangocele_site_login:
+    pattern:  /clientes
+    defaults: { _controller: MangoceleSiteBundle:login:main }
+
+
+mangocele_site_empresa:
+    pattern: /empresa/{slug}
+    defaults: { _controller: MangoceleSiteBundle:Empresas:main }
+
+mangocele_site_producto:
+    pattern: /producto/{slug}
+    defaults: { _controller: MangoceleSiteBundle:Producto:main }
+
+mangocele_site_categorias_by_id:
+    pattern: /categorias/{slug}
+    defaults: { _controller: MangoceleSiteBundle:Categorias:main }
+
+mangocele_site_categorias_empresa_by_id:
+    pattern: /categorias/{slug}/{type}
+    defaults: { _controller: MangoceleSiteBundle:Categorias:main }
+
+
+mangocele_site_user_login:
+    pattern: /usuario
+    defaults: { _controller: MangoceleSiteBundle:Usuario:main }

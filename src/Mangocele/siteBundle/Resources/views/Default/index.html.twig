@@ -1,0 +1,54 @@
+{% extends '::base.html.twig' %}
+{% block title %} Mangocele.cr {% endblock %}
+{% block stylesheets %}{% endblock %}
+{% block jsfiles %}
+    <script type="text/javascript" src="{{ asset('js/modernizr.custom.js') }}" ></script>
+{% endblock %}
+{% block body %}
+    <script>
+        $(function() {
+            $('#carousel').carouFredSel({
+                responsive: true,
+                items: {
+                    visible: 1,
+                    width: 500,
+                    height: 400
+                },
+                scroll: {
+                    duration: 250,
+                    timeoutDuration: 2500,
+                    fx: 'uncover-fade'
+                },
+                pagination: '#pager'
+            });
+        });
+    </script>
+    <div class="hero visible-lg">
+        <div id="wrapper">
+            <div id="carousel">
+                <div><img src="images/snow1.jpg" /></div>
+                <div><img src="images/img2.jpg" /></div>
+                <div><img src="images/img3.jpg" /></div>
+                <div><img src="images/img4.jpg" /></div>
+            </div>
+            <div id="title">
+                <h3>De ticos
+                    <br><span>para ticos</span>
+                </h3>
+            </div>
+            <div id="pager"></div>
+        </div>
+    </div>
+    <br clear="all"/>
+    <div class="clearfix"></div>
+    <div class="lower-content">
+        {% include "MangoceleSiteBundle:Default:index-lower-content.html.twig" %}
+    </div>
+    <hr class="visible-lg"/>
+    <div class="company-content visible-lg">
+        {% include "MangoceleSiteBundle:Default:index-company-list.html.twig" %}
+    </div>
+{% endblock %}
+{% block javascripts %}
+
+{% endblock %}

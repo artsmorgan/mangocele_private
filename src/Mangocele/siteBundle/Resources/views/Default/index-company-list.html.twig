@@ -1,0 +1,18 @@
+<div class="index-negocios">
+    <hr>
+    <h4>Empresas</h4>
+    <hr>
+    <ul class="comercios-list">
+        {%  for comercio in comercios %}
+            <li>
+                <a href="{{ comercio.url }}" class="comercio-circle">
+                    <img src="{{ app.request.scheme ~'://' ~ app.request.httpHost ~ asset( comercio.img ) }}" class="company-img-icon">
+                    <br>
+                    <div class="label label-company">{{ comercio.nombre }}</div>
+                </a>
+            </li>
+        {%  endfor %}
+    </ul>
+
+</div>
+<hr>

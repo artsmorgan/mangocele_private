@@ -1,0 +1,34 @@
+admin_productos:
+    pattern:  /
+    defaults: { _controller: "MangocelecoreBundle:Productos:index" }
+
+admin_productos_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "MangocelecoreBundle:Productos:show" }
+
+admin_productos_new:
+    pattern:  /new
+    defaults: { _controller: "MangocelecoreBundle:Productos:new" }
+
+admin_productos_create:
+    pattern:  /create
+    defaults: { _controller: "MangocelecoreBundle:Productos:create" }
+    requirements: { _method: post }
+
+admin_productos_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "MangocelecoreBundle:Productos:edit" }
+
+admin_productos_categorias:
+    pattern:  /{id}/categorias
+    defaults: { _controller: "MangocelecoreBundle:Productos:categorias" }
+
+admin_productos_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "MangocelecoreBundle:Productos:update" }
+    requirements: { _method: post|put }
+
+admin_productos_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "MangocelecoreBundle:Productos:delete" }
+    requirements: { _method: post|delete }

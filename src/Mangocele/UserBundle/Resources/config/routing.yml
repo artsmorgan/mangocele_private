@@ -1,0 +1,14 @@
+mangocele_user_users:
+    resource: "@MangoceleUserBundle/Resources/config/routing/user.yml"
+    prefix:   /admin/user
+
+mangocele_user_admin_clientes:
+    resource: "@MangoceleUserBundle/Resources/config/routing/clientes.yml"
+    prefix:   /admin/clientes
+
+
+mangocele_user_admin_login_check:
+    pattern:  /admin/login_check
+    defaults: { _controller: MangoceleUserBundle:login:index }
+
+

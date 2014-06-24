@@ -1,0 +1,48 @@
+{% extends '::base.html.twig' %}
+{% block title %} Mangocele.cr {% endblock %}
+{% block stylesheets %}{% endblock %}
+{% block jsfiles %}
+    <script type="text/javascript" src="{{ asset('js/modernizr.custom.js') }}" ></script>
+{% endblock %}
+{% block body %}
+    <div class="content-wrapper">
+        <div class="header-banner"><img src="http://placehold.it/1100x110"></div>
+        <h1>Ingreso de Miembros</h1>
+        <div class="form-ingresar">
+            {% if errors is defined %}
+                <div class="alert alert-danger">
+                    <strong>Error!</strong> {{ errors }}
+                </div>
+            {% endif %}
+            {{ form_start(form) }}
+            {{ form_errors(form) }}
+
+            <div class="form-group">
+                {{ form_label(form.email) }}
+                {{ form_errors(form.email) }}
+                {{ form_widget(form.email,{'attr': {'class': 'form-control'} }) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_label(form.password) }}
+                {{ form_errors(form.password) }}
+                {{ form_widget(form.password,{'attr': {'class': 'form-control'} }) }}
+            </div>
+
+            <div class="form-group">
+                <div class="ingresar-links">
+                    <a href="#">Registrarse</a>
+                    <a href="#" class="forgot-link">Olvide mi password?</a>
+                </div>
+                <div class="ingresar-ing">
+                    {{ form_widget(form.ingresar,{'attr':{'class':'btn btn-primary'}}) }}
+                </div>
+            </div>
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+
+{% endblock %}

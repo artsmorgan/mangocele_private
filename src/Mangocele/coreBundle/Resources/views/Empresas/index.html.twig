@@ -1,0 +1,68 @@
+{% extends 'MangoceleAdminBundle:Default:adminBase.html.twig' %}
+{% block pagetitle%}Listado de Empresas{% endblock %}
+{% block breadcrumbs%}Empresas{% endblock %}
+{% block body -%}
+
+    <a href="{{ path('admin_empresas_new') }}" class="btn btn-blue pull-right">
+        Crear Nueva Empresa
+    </a>
+
+    <table class="records_list table table-striped" style="margin-top: 60px">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Idcliente</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Tel. Oficina</th>
+                <th>Telefono Personal</th>
+                <th>Fax</th>
+                <th>Email</th>
+                <th>Direccion</th>
+                <!--<th>Cordx</th>
+                <th>Cordy</th>-->
+                <th>Facebook</th>
+                <th>Twitter</th>
+                <!--<th>Linkedin</th>-->
+                <th>Youtube</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('admin_empresas_show', { 'id': entity.id }) }}">{{ entity.idCliente }}</a></td>
+                <td>{{ entity.id }}</td>
+                <td>{{ entity.nombre }}</td>
+                <td>{{ entity.descripcion }}</td>
+                <td>{{ entity.telefonoOficina }}</td>
+                <td>{{ entity.telefonoEmpresa }}</td>
+                <td>{{ entity.fax }}</td>
+                <td>{{ entity.email }}</td>
+                <td>{{ entity.direccion }}</td>
+                <!--<td>{{ entity.cordX }}</td>
+                <td>{{ entity.cordY }}</td>-->
+                <td>{{ entity.facebook }}</td>
+                <td>{{ entity.twitter }}</td>
+                <!--<td>{{ entity.linkedin }}</td>-->
+                <td>{{ entity.youtube }}</td>
+                <td>
+                    <a href="{{ path('admin_empresas_edit', { 'id': entity.id }) }}" title="Editar" style="margin-left: 10px"><i class="icon-edit"></i></a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <br clear="all">
+{% endblock %}
+{% block scripts %}
+    <script>
+        jQuery(document).ready(function() {
+            App.setPage("table_managed");
+            App.init(); // init the rest of plugins and elements
+            $('#empresas').addClass('active');
+            $('#mangocele_userbundle_user_password').val('');
+        });
+    </script>
+{% endblock %}

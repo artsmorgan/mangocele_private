@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Mangocele\coreBundle\Entity\ProductosImg" table="productos_img">
+    <indexes>
+      <index name="id_producto_idx" columns="id_producto"/>
+    </indexes>
+    <unique-constraints>
+      <unique-constraint name="id_p_imagen_UNIQUE" columns="id_p_imagen"/>
+    </unique-constraints>
+    <id name="idPImagen" type="integer" column="id_p_imagen">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="urlImagen" type="string" column="url_imagen" length="45" nullable="true"/>
+    <field name="tipoImagen" type="string" column="tipo_imagen" length="45" nullable="true"/>
+    <many-to-one field="idProducto" target-entity="Productos">
+      <join-columns>
+        <join-column name="id_producto" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

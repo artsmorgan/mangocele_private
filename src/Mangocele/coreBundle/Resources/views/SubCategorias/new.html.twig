@@ -1,0 +1,19 @@
+{% extends 'MangoceleAdminBundle:Default:adminBase.html.twig' %}
+{% block pagetitle%}Crear Sub-Categoría{% endblock %}
+{% block breadcrumbs%}Categorías{% endblock %}
+{% block body -%}
+
+    {{ form(form) }}
+
+<br clear="all">
+{% endblock %}
+{% block scripts %}
+    <script>
+        jQuery(document).ready(function() {
+            App.setPage("table_managed");
+            App.init(); // init the rest of plugins and elements
+            $('#categorias').addClass('active');
+            $('#mangocele_userbundle_user_password').val('');
+        });
+    </script>
+{% endblock %}

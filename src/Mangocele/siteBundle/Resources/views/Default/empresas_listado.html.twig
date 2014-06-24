@@ -1,0 +1,46 @@
+{% extends '::base.html.twig' %}
+{% block title %} Mangocele.cr {% endblock %}
+{% block stylesheets %}{% endblock %}
+{% block jsfiles %}
+    <script type="text/javascript" src="{{ asset('js/modernizr.custom.js') }}" ></script>
+{% endblock %}
+{% block body %}
+<div class="content-wrapper" id="empresas">
+    <div class="header-banner"><img src="http://placehold.it/1100x110"></div>
+    <h1>
+        Empresas
+        <span class="empresas-order">
+            Ordenar:
+            <select name="ordenar">
+                <option>Nombre A...Z</option>
+                <option>Nombre Z...A</option>
+            </select>
+        </span>
+    </h1>
+
+    <div class="empresas-listado">
+        <ul class="empresas" >
+            {% for comercio in comercios %}
+            <li>
+                <a href="{{ comercio.url }}">
+                    <div class="empresa-imagen"><img src="{{ app.request.scheme ~'://' ~ app.request.httpHost ~ asset( comercio.img ) }}" class="company-img-icon double-x"></div>
+                    <div class="empresa-descripcion">
+                        <div class="title">
+                            <h2>{{ comercio.nombre }}</h2>
+                        </div>
+                        <div class="desc">{{ comercio.desc }}</div>
+                    </div>
+                    <div class="empresa-accion">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </div>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</div>
+{% endblock %}
+{% block javascripts %}
+
+{% endblock %}

@@ -1,0 +1,30 @@
+admin_subcategorias:
+    pattern:  /
+    defaults: { _controller: "MangocelecoreBundle:SubCategorias:index" }
+
+admin_subcategorias_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "MangocelecoreBundle:SubCategorias:show" }
+
+admin_subcategorias_new:
+    pattern:  /new
+    defaults: { _controller: "MangocelecoreBundle:SubCategorias:new" }
+
+admin_subcategorias_create:
+    pattern:  /create
+    defaults: { _controller: "MangocelecoreBundle:SubCategorias:create" }
+    requirements: { _method: post }
+
+admin_subcategorias_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "MangocelecoreBundle:SubCategorias:edit" }
+
+admin_subcategorias_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "MangocelecoreBundle:SubCategorias:update" }
+    requirements: { _method: post|put }
+
+admin_subcategorias_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "MangocelecoreBundle:SubCategorias:delete" }
+    requirements: { _method: post|delete }

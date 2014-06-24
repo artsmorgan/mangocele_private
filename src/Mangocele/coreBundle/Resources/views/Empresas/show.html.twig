@@ -1,0 +1,84 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Empresas</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Idcliente</th>
+                <td>{{ entity.idCliente }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ entity.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Descripcion</th>
+                <td>{{ entity.descripcion }}</td>
+            </tr>
+            <tr>
+                <th>Telefonooficina</th>
+                <td>{{ entity.telefonoOficina }}</td>
+            </tr>
+            <tr>
+                <th>Telefonoempresa</th>
+                <td>{{ entity.telefonoEmpresa }}</td>
+            </tr>
+            <tr>
+                <th>Fax</th>
+                <td>{{ entity.fax }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ entity.email }}</td>
+            </tr>
+            <tr>
+                <th>Direccion</th>
+                <td>{{ entity.direccion }}</td>
+            </tr>
+            <tr>
+                <th>Cordx</th>
+                <td>{{ entity.cordX }}</td>
+            </tr>
+            <tr>
+                <th>Cordy</th>
+                <td>{{ entity.cordY }}</td>
+            </tr>
+            <tr>
+                <th>Facebook</th>
+                <td>{{ entity.facebook }}</td>
+            </tr>
+            <tr>
+                <th>Twitter</th>
+                <td>{{ entity.twitter }}</td>
+            </tr>
+            <tr>
+                <th>Linkedin</th>
+                <td>{{ entity.linkedin }}</td>
+            </tr>
+            <tr>
+                <th>Youtube</th>
+                <td>{{ entity.youtube }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('admin_empresas') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('admin_empresas_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

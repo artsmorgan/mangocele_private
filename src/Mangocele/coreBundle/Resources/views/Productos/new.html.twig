@@ -1,0 +1,88 @@
+{% extends 'MangoceleAdminBundle:Default:adminBase.html.twig' %}
+{% block pagetitle%}<strong>Crear Producto</strong> > Agregar categorías > Agregar Imagenes{% endblock %}
+{% block breadcrumbs%}Productos{% endblock %}
+{% block body -%}
+    <a href="{{ path('admin_productos') }}" class="btn btn-blue pull-right">
+        Regresar al listado
+    </a>
+
+    <br clear="all" />
+    <div class="empresas-img-left pull-left">
+        <div class="img-principal">
+            <img src="http://placehold.it/350x350">
+            <form action="upload_file.php" method="post" enctype="multipart/form-data">
+                <label for="file">Subir Imagen:</label>
+                <input type="file" name="file" id="file"><br>
+                <input type="submit" name="submit" value="Subir" class="btn" style="width: 100%">
+            </form>
+        </div>
+    </div>
+    <div class="empresas-info-right pull-left">
+        {{ form_start(form,{ 'attr': {'class': 'form-horizontal mangocele-info'} }) }}
+        {{ form_errors(form) }}
+        <div class="control-group">
+            {{ form_label(form.idEmpresa,null,{ 'label_attr': {'class': 'control-label'}} ) }}
+            <div class="controls">
+                {{ form_errors(form.idEmpresa) }}
+                {{ form_widget(form.idEmpresa) }}
+            </div>
+        </div>
+
+        <div class="control-group">
+            {{ form_label(form.titulo,null,{ 'label_attr': {'class': 'control-label'}} ) }}
+            <div class="controls">
+                {{ form_errors(form.titulo) }}
+                {{ form_widget(form.titulo) }}
+            </div>
+        </div>
+
+        <div class="control-group">
+            {{ form_label(form.descripcion,null,{ 'label_attr': {'class': 'control-label'}} ) }}
+            <div class="controls">
+                {{ form_errors(form.descripcion) }}
+                {{ form_widget(form.descripcion) }}
+            </div>
+        </div>
+
+        <div class="control-group">
+            {{ form_label(form.cantidad,null,{ 'label_attr': {'class': 'control-label'}} ) }}
+            <div class="controls">
+                {{ form_errors(form.cantidad) }}
+                {{ form_widget(form.cantidad) }}
+            </div>
+        </div>
+
+        <div class="control-group">
+            {{ form_label(form.dimensiones,null,{ 'label_attr': {'class': 'control-label'}} ) }}
+            <div class="controls">
+                {{ form_errors(form.dimensiones) }}
+                {{ form_widget(form.dimensiones) }}
+            </div>
+        </div>
+
+        <div class="control-group">
+            {{ form_label(form.peso,null,{ 'label_attr': {'class': 'control-label'}} ) }}
+            <div class="controls">
+                {{ form_errors(form.peso) }}
+                {{ form_widget(form.peso) }}
+            </div>
+        </div>
+
+
+
+        {{ form_end(form) }}
+    </div>
+
+
+    <br clear="all" />
+{% endblock %}
+    {% block scripts %}
+        <script>
+            jQuery(document).ready(function() {
+                App.setPage("table_managed");
+                App.init(); // init the rest of plugins and elements
+                $('#productos').addClass('active');
+                $('#mangocele_userbundle_user_password').val('');
+            });
+        </script>
+    {% endblock %}

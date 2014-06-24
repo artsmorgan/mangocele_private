@@ -1,0 +1,60 @@
+{% extends 'MangoceleAdminBundle:Default:adminBase.html.twig' %}
+{% block pagetitle%}Lista de usuarios{% endblock %}
+{% block breadcrumbs%}Usuarios{% endblock %}
+{% block body -%}
+    <a href="{{ path('user_new') }}" class="pull-right btn green">
+        <i class="icon-plus-sign"></i> Crear un nuevo Usuario
+    </a>
+
+    <table class="records_list table table-striped" style="margin-top: 60px">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Nombre</th>
+                <th>Apellido1</th>
+                <th>Apellido2</th>
+                <th>Pais</th>
+                <th>Empresa</th>
+                <th>Telefono</th>
+                <th>Activo</th>
+                <th>Ultima visita</th>
+                <th>Roles</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+
+                <td>{{ entity.id }}</td>
+                <td>{{ entity.email }}</td>
+                <td>{{ entity.nombre }}</td>
+                <td>{{ entity.apellido1 }}</td>
+                <td>{{ entity.apellido2 }}</td>
+                <td>{{ entity.pais }}</td>
+                <td>{{ entity.empresa }}</td>
+                <td>{{ entity.telefono }}</td>
+                <td>{{ entity.enabled }}</td>
+                <td>{% if entity.lastLogin %}{{ entity.lastLogin|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.roles }}</td>
+                <td>
+                    <!--<a href="{{ path('user_show', { 'id': entity.id }) }}"><i class="icon-user"></i></a>-->
+                    <a href="{{ path('user_edit', { 'id': entity.id }) }}" title="Editar" style="margin-left: 10px"><i class="icon-edit"></i></a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {% endblock %}
+{% block scripts %}
+    <script>
+        jQuery(document).ready(function() {
+            App.setPage("table_managed");
+            App.init(); // init the rest of plugins and elements
+            $('#clientes').addClass('active');
+        });
+    </script>
+{% endblock %}
+

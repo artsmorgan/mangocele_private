@@ -1,0 +1,91 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}MangoceleSiteBundle:Empresas:main{% endblock %}
+
+{% block body %}
+
+
+    {% include "MangoceleSiteBundle:modals:contact-modal.html.twig" %}
+    {% include "MangoceleSiteBundle:modals:pedido-modal.html.twig" %}
+    {% include "MangoceleSiteBundle:modals:product-images-modal.html.twig" %}
+
+    <div class="content-wrapper" id="empresa">
+
+        <div class="company-header">
+
+            <div class="company-img product-img">
+                <a href="#" data-toggle="modal" data-target="#productImagesModal">
+                    <img src="{{ app.request.scheme ~'://' ~ app.request.httpHost ~ asset('images/pulseras.png') }}" width="240" height="240">
+                </a>
+                <div class="product-actions">
+                    <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#contactModal">
+                        <span class="glyphicon glyphicon-envelope"></span>
+                        <span> Contactar al vendedor</span>
+                    </a>
+                    <a href="#" class="btn btn-warning  btn-block" data-toggle="modal" data-target="#pedidoModal">
+                        <span class="glyphicon glyphicon-tags"></span>
+                        <span> Realizar pedido</span>
+                    </a>
+                    <a href="/empresa/Empresa-test" class="btn btn-default  btn-block">
+                        <span class="glyphicon glyphicon-barcode"></span>
+                        <span> Datos de la empresa</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="company-name product-name">
+                <h1>
+                    {{ data }} <small>| Id: emp-01</small>
+                    <div class="empresa-contact-form pull-right">
+                        Valoración:
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                </h1>
+
+                <div class="company-description">
+                    {{ descripcion|raw }}
+                    <hr>
+                    <h4>Categorias: </h4>
+
+                    <div class="categorias">
+                        {% for categoria in categorias|slice(0, 10) %}
+                            <span class="label label-info">{{ categoria }}</span>
+                        {% endfor %}
+                    </div>
+
+                    <hr>
+                    <h4>Caracteristicas: </h4>
+                    <div class="categorias">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <td>Precio</td>
+                                    <td>Contenido</td>
+                                    <td>Dimensiones</td>
+                                    <td>Peso</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="warning">
+                                    <td>C 10,000</td>
+                                    <td>Una pulsera hecha a mano</td>
+                                    <td>10cm x 2cm</td>
+                                    <td>10 gramos</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+{% endblock %}

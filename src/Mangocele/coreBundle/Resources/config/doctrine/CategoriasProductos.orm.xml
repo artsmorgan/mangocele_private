@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Mangocele\coreBundle\Entity\CategoriasProductos" table="categorias_productos">
+    <indexes>
+      <index name="id_producto_idx" columns="id_producto"/>
+    </indexes>
+    <unique-constraints>
+      <unique-constraint name="id_categoria_producto_UNIQUE" columns="id"/>
+    </unique-constraints>
+    <id name="id" association-key="true"/>
+    <field name="idSubCategoria" type="integer" column="id_sub_categoria" nullable="true"/>
+    <one-to-one field="id" target-entity="SubCategorias">
+      <join-columns>
+        <join-column name="id" referenced-column-name="id"/>
+      </join-columns>
+    </one-to-one>
+    <many-to-one field="idProducto" target-entity="Productos">
+      <join-columns>
+        <join-column name="id_producto" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

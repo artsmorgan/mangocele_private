@@ -1,0 +1,55 @@
+{% extends 'MangoceleAdminBundle:Default:adminBase.html.twig' %}
+{% block pagetitle%}Listado de Productos{% endblock %}
+{% block breadcrumbs%}Productos{% endblock %}
+{% block body -%}
+<a href="{{ path('admin_productos_new') }}" class="btn btn-blue pull-right">
+    Crear Producto
+</a>
+
+<table class="records_list table table-striped">
+        <thead>
+            <tr>
+                <th>Empresa</th>
+                <th>Id</th>
+                <th>Titulo</th>
+                <th>Descripcion</th>
+                <th>Cantidad</th>
+                <th>Dimensiones</th>
+                <th>Peso</th>
+                <th>Valoracion</th>
+                <!--<th>Createdby</th>-->
+                <th>Fecha Creacion</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('admin_productos_show', { 'id': entity.id }) }}">{{ entity.idEmpresa }}</a></td>
+                <td>{{ entity.id }}</td>
+                <td>{{ entity.titulo }}</td>
+                <td>{{ entity.descripcion }}</td>
+                <td>{{ entity.cantidad }}</td>
+                <td>{{ entity.dimensiones }}</td>
+                <td>{{ entity.peso }}</td>
+                <td>{{ entity.valoracion }}</td>
+                <!--<td>{{ entity.createdBy }}</td>-->
+                <td>{% if entity.createdWhen %}{{ entity.createdWhen|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <a href="{{ path('admin_productos_edit', { 'id': entity.id }) }}" title="Editar" style="margin-left: 10px"><i class="icon-edit"></i></a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <br clear="all">
+    {% endblock %}
+    {% block scripts %}
+        <script>
+            jQuery(document).ready(function() {
+                App.setPage("table_managed");
+                App.init(); // init the rest of plugins and elements
+                $('#productos').addClass('active');
+            });
+        </script>
+    {% endblock %}

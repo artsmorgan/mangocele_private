@@ -1,0 +1,50 @@
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">
+                        Contactar
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-contactar">
+                    {{ form_start(contact) }}
+                    {{ form_errors(contact) }}
+
+                    <div class="form-group">
+                        {{ form_label(contact.Nombre) }}
+                        {{ form_errors(contact.Nombre) }}
+                        {{ form_widget(contact.Nombre,{'attr': {'class': 'form-control'} }) }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(contact.Email) }}
+                        {{ form_errors(contact.Email) }}
+                        {{ form_widget(contact.Email,{'attr': {'class': 'form-control'} }) }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(contact.Telefono) }}
+                        {{ form_errors(contact.Telefono) }}
+                        {{ form_widget(contact.Telefono,{'attr': {'class': 'form-control'} }) }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(contact.Mensaje) }}
+                        {{ form_errors(contact.Mensaje) }}
+                        {{ form_widget(contact.Mensaje,{'attr': {'class': 'form-control', 'rows': 5} }) }}
+                    </div>
+
+
+                    <div class="form-group">
+                       {{ form_widget(contact.Enviar,{'attr':{'class':'btn btn-primary'}}) }}
+                    </div>
+
+                    {{ form_end(contact) }}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

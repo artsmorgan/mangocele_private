@@ -1,0 +1,133 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}MangoceleSiteBundle:Empresas:main{% endblock %}
+
+{% block body %}
+
+
+    <div class="content-wrapper" id="usuario">
+
+        <div class="company-header">
+
+            <div class="company-img">
+                <a href="#" data-toggle="modal" data-target="#productImagesModal">
+                    <img src="http://placehold.it/240x240">
+                </a>
+                <div class="product-actions">
+                    <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#contactModal">
+                        <span class="glyphicon glyphicon-camera"></span>
+                        <span> Editar foto </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="company-name">
+                <h1>
+                    Bienvenido Usuario
+                    <div class="empresa-contact-form pull-right">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#home" data-toggle="tab">General</a></li>
+                            <li><a href="#profile" data-toggle="tab">Personal</a></li>
+                            <li><a href="#messages" data-toggle="tab">Comercio</a></li>
+                        </ul>
+                    </div>
+                </h1>
+
+                <div class="company-description">
+                    <!-- Nav tabs -->
+
+
+                    <!-- Tab panes -->
+                    <div class="tab-content tab-user">
+                        <div class="tab-pane active" id="home">
+                            <h4>
+                                General
+                                <div class="empresa-contact-form pull-right">
+                                    <a href="#"> <span class="glyphicon glyphicon-pencil"></span> Editar </a>
+                                </div>
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue mollis justo, eu imperdiet turpis vestibulum quis.
+                                Duis nisl enim, tincidunt ut lacus at, ultrices tempor augue. Cum sociis natoque penatibus et magnis dis parturient montes.
+                            </p>
+                            <p>
+                                nascetur ridiculus mus. Curabitur felis arcu, faucibus in egestas a, venenatis vitae ligula. Vestibulum tempor est tellus,
+                                ut bibendum mi ullamcorper sit amet. Aliquam congue id leo suscipit venenatis. Nullam nec pharetra dolor, id semper nulla.
+                                Donec scelerisque bibendum felis et cursus. Mauris at magna a neque aliquam vehicula. Suspendisse sed enim nisl.
+                            </p>
+                        </div>
+                        <div class="tab-pane" id="profile">
+                            <h4>Datos Personales
+                                <div class="empresa-contact-form pull-right">
+                                    <a href="#"> <span class="glyphicon glyphicon-pencil"></span> Editar </a>
+                                </div>
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue mollis justo, eu imperdiet turpis vestibulum quis.
+                                Duis nisl enim, tincidunt ut lacus at, ultrices tempor augue. Cum sociis natoque penatibus et magnis dis parturient montes.
+                            </p>
+                        </div>
+                        <div class="tab-pane" id="messages">
+                            <h4>Detalles de mi comercio
+                                <div class="empresa-contact-form pull-right">
+                                    <a href="#"> <span class="glyphicon glyphicon-pencil"></span> Editar </a>
+                                </div>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <h4>Categorias:
+                        <div class=" pull-right">
+                            <a href="#" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-plus-sign"></span> Agregar
+                            </a>
+                        </div>
+                    </h4>
+
+                    <div class="categorias well cat-usuario">
+                        {% for categoria in categorias %}
+                            <span class="label label-info" style="margin: 0 10px">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                {{ categoria }}
+                            </span>
+                        {% endfor %}
+                    </div>
+
+                    <hr>
+                    <h4>
+                        Mis productos:
+                        <div class=" pull-right">
+                            <a href="#" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-plus-sign"></span> Crear Nuevo
+                            </a>
+                        </div>
+                    </h4>
+                    <br>
+                    <div class="categorias">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <td>Nombre</td>
+                                <td>Descripción</td>
+                                <td>Precio</td>
+                                <td>Acciones</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td colspan="4">No hay productos disponibles</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+{% endblock %}

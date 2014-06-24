@@ -1,0 +1,30 @@
+admin_clientes:
+    pattern:  /
+    defaults: { _controller: "MangoceleUserBundle:Clientes:index" }
+
+admin_clientes_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "MangoceleUserBundle:Clientes:show" }
+
+admin_clientes_new:
+    pattern:  /new
+    defaults: { _controller: "MangoceleUserBundle:Clientes:new" }
+
+admin_clientes_create:
+    pattern:  /create
+    defaults: { _controller: "MangoceleUserBundle:Clientes:create" }
+    requirements: { _method: post }
+
+admin_clientes_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "MangoceleUserBundle:Clientes:edit" }
+
+admin_clientes_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "MangoceleUserBundle:Clientes:update" }
+    requirements: { _method: post|put }
+
+admin_clientes_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "MangoceleUserBundle:Clientes:delete" }
+    requirements: { _method: post|delete }

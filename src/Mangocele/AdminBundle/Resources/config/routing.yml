@@ -1,0 +1,12 @@
+mangocele_admin:
+    pattern:  /login/admin
+    defaults: { _controller: MangoceleAdminBundle:Default:login }
+
+
+mangocele_admin_homepage:
+    pattern:  /admin/home/
+    defaults: { _controller: MangoceleAdminBundle:Default:index }
+
+#mangocele_admin_users:
+#    pattern:  /admin/users/
+#    defaults: { _controller: MangoceleAdminBundle:Default:showUsers }
