@@ -49,7 +49,7 @@ class __TwigTemplate_9f16a8c70d1aebd03d33e213eb5264db10ec67964fd951198f945fb9f10
             // line 13
             echo "            <li>
                 <div class=\"first-el visible-lg\">
-                    <a href=\"/producto/pulseras\">
+                    <a href=\"/producto/pulseras\" class=\"img-link\">
                         <img src=\"images/pulseras.png\">
                         <div class=\"product-info\">
                             <div class=\"pull-left product-description\">Collares</div>
@@ -81,6 +81,6 @@ class __TwigTemplate_9f16a8c70d1aebd03d33e213eb5264db10ec67964fd951198f945fb9f10
 
     public function getDebugInfo()
     {
-        return array (  67 => 25,  50 => 13,  39 => 7,  24 => 4,  19 => 1,  123 => 54,  118 => 11,  113 => 5,  100 => 54,  65 => 22,  54 => 14,  48 => 12,  42 => 10,  34 => 8,  28 => 5,  22 => 1,  112 => 53,  109 => 52,  104 => 50,  102 => 55,  97 => 46,  95 => 45,  56 => 8,  53 => 7,  46 => 12,  43 => 4,  38 => 9,  32 => 2,);
+        return array (  67 => 25,  50 => 13,  39 => 7,  28 => 5,  24 => 4,  19 => 1,  112 => 53,  109 => 52,  104 => 50,  102 => 49,  97 => 46,  95 => 45,  56 => 8,  53 => 7,  46 => 12,  43 => 4,  38 => 3,  32 => 2,);
     }
 }

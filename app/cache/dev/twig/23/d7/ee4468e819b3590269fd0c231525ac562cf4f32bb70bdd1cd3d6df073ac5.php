@@ -74,10 +74,10 @@ class __TwigTemplate_23d7ee4468e819b3590269fd0c231525ac562cf4f32bb70bdd1cd3d6df0
     <div class=\"hero visible-lg\">
         <div id=\"wrapper\">
             <div id=\"carousel\">
-                <div><img src=\"images/snow1.jpg\" /></div>
-                <div><img src=\"images/img2.jpg\" /></div>
-                <div><img src=\"images/img3.jpg\" /></div>
-                <div><img src=\"images/img4.jpg\" /></div>
+                <div><a href=\"/conocenos\"><img src=\"images/snow1.jpg\" /> </a></div>
+                <div><a href=\"/conocenos\"><img src=\"images/img2.jpg\" /> </a></div>
+                <div><a href=\"/conocenos\"><img src=\"images/img3.jpg\" /> </a></div>
+                <div><a href=\"/conocenos\"><img src=\"images/img4.jpg\" /> </a></div>
             </div>
             <div id=\"title\">
                 <h3>De ticos

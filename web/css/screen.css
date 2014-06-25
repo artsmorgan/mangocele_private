@@ -109,6 +109,8 @@
         width: 100% !important;
     }
 
+
+
     .first-el {
         width: 100%;
     }
@@ -241,6 +243,14 @@
 
 }
 
+.img-link{
+    color: #000 !important;
+    font-weight: bold;
+}
+.img-link:hover{
+    color: #333 !important;
+    font-weight: bold;
+}
 
 img {
     width: 100%;
@@ -483,7 +493,11 @@ img {
 
 .cat-title{
     text-align: center;
-    color: #ccc;
+    color: #6F6C6C;
+    font-size: 16px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #E2E2E2;
+    margin: 40px 0 0 0;
 }
 
 .content-wrapper{
